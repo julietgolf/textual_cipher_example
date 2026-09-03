@@ -1,0 +1,83 @@
+
+/* ==========================================================================
+ * Dark Palette Tokens
+ * ========================================================================== */
+$dp-pink:    #8C2548;
+$dp-slate:   #4A4A5A;
+$dp-purple:  #520A61;
+$dp-black:   #121216;
+$dp-blue:    #141E66;
+
+/* ==========================================================================
+ * Global App Theme Tokens (Textual Shader Hooks)
+ * ========================================================================== */
+$background:  $dp-slate;
+$surface:     $dp-black;
+$primary:     $dp-pink;
+$secondary:   $dp-purple;
+$foreground:   $dp-pink;
+$accent:      $dp-blue;
+$text:        #E0E0E0;
+
+TextArea {
+    color: #ff4281;
+}
+
+TextArea:focus {
+    background-tint: $foreground 5%;
+}
+
+Header {
+    background:  $dp-slate;
+    
+    color: #FFFFFF;
+}
+
+Footer {
+    background-tint: $dp-purple 50%;
+    color: #A0A0A0;
+}
+
+#shift {
+    color: #ff4281;
+    width: 15;
+}
+
+#control_bar > Button {
+    margin: 0 1;
+    width: 15;
+    height: 3;
+    background: $dp-pink;
+    border: none;
+    border-top: hkey #a5244f;
+    border-bottom: hkey #6b1834;
+}
+
+#control_bar > Button:hover {
+    background: #812544;
+    border-bottom: hkey #a5244f;
+    border-top: hkey #6b1834;
+}
+
+#input {
+    min-height: 10;
+    color: #ff4281;
+}
+
+#method-select > SelectCurrent {
+    background-tint: $dp-blue 20%;
+}
+
+#method-select > SelectCurrent > Static#label {
+    color: $text-disabled;
+}
+
+#method-select > SelectCurrent > .arrow  {
+    color: #141E66;
+
+}
+
+#method-select > OptionList  {
+    background-tint: $dp-blue 20%;
+    color: white;
+}
