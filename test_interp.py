@@ -302,7 +302,6 @@ LoadWeights {
     paths_ready = reactive({"source":None,"target":None,"save":None})
 
     def watch_paths_ready(self, paths_ready):
-        self.app.log_interp(str(paths_ready))
         source_ready = paths_ready["source"]
         if not source_ready:
             self.input_ready = False
@@ -361,9 +360,6 @@ LoadWeights {
         self.app._advance_pbar(self.query_one(ProgressBar),call_back = lambda: (not setattr(self.app, "disable_output", False)
                                                                                 and 
                                                                                 self.app.log_interp(f"Weights loaded")))
-        
-       
-        
 
 class OptionsGroup(Horizontal):
     DEFAULT_CSS = """
