@@ -2,9 +2,27 @@ from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header, Input, TextArea, Button, Select
 from textual.containers import HorizontalGroup, VerticalGroup
 from textual.binding import Binding
-from textual.reactive import reactive
+from textual.theme import Theme
 
-
+liquid_theme = Theme(
+    name="liquid",
+    primary="#8C2548",
+    secondary="#520A61",
+    accent="#141E66",
+    foreground="#8C2548",
+    background="#4A4A5A",
+    #success="#A3BE8C",
+    #warning="#EBCB8B",
+    #error="#BF616A",
+    surface="#121216",
+    #panel="#434C5E",
+    dark=True,
+    variables={
+    #    "block-cursor-text-style": "none",
+    #    "footer-background": "#88C0D0",
+    #    "input-selection-background": "#81a1c1 35%",
+    },
+)
 class CCEditor(VerticalGroup):
     unciphed = ""
     key = ""
@@ -139,6 +157,9 @@ class CypherApp(App):
                 Binding("ctrl+d", "quit", "Quit", priority=True),
                 Binding("escape", "unfocus", "Unfocus", priority=True),]
 
+    def on_mount(self) -> None:
+        self.register_theme(liquid_theme)
+        self.theme = "liquid"
 
     def compose(self) -> ComposeResult:
         """Create child widgets for the app."""

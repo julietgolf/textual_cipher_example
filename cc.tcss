@@ -1,24 +1,29 @@
 
 /* ==========================================================================
  * Dark Palette Tokens
- * ========================================================================== */
-$dp-pink:    #8C2548;
-$dp-slate:   #4A4A5A;
-$dp-purple:  #520A61;
-$dp-black:   #121216;
-$dp-blue:    #141E66;
+ * ========================================================================== 
+ * $dp-pink:    #8C2548;
+ * $dp-slate:   #4A4A5A;
+ * $dp-purple:  #520A61;
+ * $dp-black:   #121216;
+ * $dp-blue:    #141E66;
 
-/* ==========================================================================
+ * ==========================================================================
  * Global App Theme Tokens (Textual Shader Hooks)
- * ========================================================================== */
-$background:  $dp-slate;
-$surface:     $dp-black;
-$primary:     $dp-pink;
-$secondary:   $dp-purple;
-$foreground:   $dp-pink;
-$accent:      $dp-blue;
-$text:        #E0E0E0;
-
+ * ========================================================================== 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  */
+$dp-slate: $background;
+$dp-black: $surface;
+$dp-pink: $primary;
+$dp-purple: $secondary;
+$dp-pink: $foreground;
+$dp-blue: $accent;
+$text:        #E0E0E0; 
 TextArea {
     color: #ff4281;
 }
